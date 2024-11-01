@@ -57,44 +57,6 @@ u     =    4*sin(omega*t) + 3*sin(2*omega*t) +...
 plant = ss(A, b, c', []);
 y     = lsim(plant, u, t, x0)';
 
-%% Non-minimal realization (needed for analysis)
-
-% finding Pi and theta such that:
-% 1) Pi*(blkdiag(Lambda, Lambda) + [ell; zeros(n, 1)]*theta') = A*Pi
-% 2) Pi*[zeros(n, 1); ell] = b
-% 3) theta' = c'*Pi
-% see the proof of Lemma 3
-psi   = place(A', c, flip(lambda))';
-A1    = A - psi*c';
-[H,J] = eig(A1);
-[DJ, indices] = sort(diag(J), 'descend');
-H    = H(:, indices); % permuting the columns of H
-% Pi1
-mu    = pinv(ctrb(Lambda, ell))*pinv(H)*psi;
-X     = zeros(n);
-for i = 1:n
-    X = X  + mu(i)*Lambda^(i-1);
-end
-Pi1   = H*X;
-% Pi2
-mu    = pinv(ctrb(Lambda, ell))*pinv(H)*b;
-X     = zeros(n);
-for i = 1:n
-    X = X  + mu(i)*Lambda^(i-1);
-end
-Pi2   = H*X;
-Pi    = [Pi1 Pi2];
-
-% theta
-theta1 = Pi1' * c;
-theta2 = Pi2' * c;
-theta  = [theta1; theta2];
-
-% nonminimal realization
-F = [Lambda + ell*theta1' ell*theta2';
-                 zeros(n)      Lambda];
-g = [zeros(n, 1); ell];
-
 %% Filtering
 
 % filter initial conditions
@@ -186,8 +148,6 @@ Q = value(Q);
 K = U*Q*pinv(Za*Q)*[zeros(n, 2*n); eye(2*n)];
 
 %% Stability check
-disp('Eigenvalues of F+gK:')
-disp(eig(F + g*K))
 
 A_augmented = [       A  zeros(n)  zeros(n);
                  ell*c'    Lambda  zeros(n);
