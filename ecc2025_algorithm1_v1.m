@@ -1,7 +1,7 @@
 %% IMPACT4Mech - Continuous-Time Data-Driven Control
 % Numerical example for Algorithm 1 of the paper:
 % A. Bosso, M. Borghesi, A. Iannelli, G. Notarstefano, A. R. Teel
-% "Derivative-Free Data-Driven Control for Continuous-Time Linear
+% "Derivative-Free Data-Driven Control of Continuous-Time Linear
 % Time-Invariant Systems"
 
 % This file requires the installation of MOSEK and YALMIP
