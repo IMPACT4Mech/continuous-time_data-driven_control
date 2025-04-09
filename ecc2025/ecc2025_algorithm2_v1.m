@@ -50,7 +50,7 @@ x0 = [-2.1002; 4.5808; 2.2305]; % example for the paper
 % applied input (sum of sinusoids)
 omega = 5;
 t     = 0:T/1000000:T;
-u     =    4*sin(omega*t) + 3*sin(2*omega*t) +...
+u     =    4*sin(omega*t) + 3*sin(2*omega*t) + ...
          2*sin(3*omega*t) + 1*sin(4*omega*t);
 
 % plant simulation
