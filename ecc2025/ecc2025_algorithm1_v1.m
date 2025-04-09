@@ -161,6 +161,9 @@ optimize(constr, obj, ops);
 Q = value(Q);
 K = U*Q*pinv(Z*Q);
 
+disp('Computed K:')
+disp(K)
+
 %% Stability check
 
 F = [          A              B;
