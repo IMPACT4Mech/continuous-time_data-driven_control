@@ -45,13 +45,13 @@ Ts     = 0.1;
 
 % plant initial conditions
 % x0 = 5*(2*rand(n, 1) - 1); % random initial conditions
-x0  = [-3.9223; 4.0631; 3.7965]; % example for the paper 
+x0 = [-2.1002; 4.5808; 2.2305]; % example for the paper
 
 % applied input (sum of sinusoids)
 omega = 5;
 t     = 0:T/1000000:T;
 u     =    4*sin(omega*t) + 3*sin(2*omega*t) +...
-         2*sin(3*omega*t) +   1*sin(omega*t);
+         2*sin(3*omega*t) + 1*sin(4*omega*t);
 
 % plant simulation
 plant = ss(A, b, c', []);
