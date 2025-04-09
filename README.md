@@ -2,7 +2,7 @@
 
 # Continuous-Time Data-Driven Control
 
-This repository contains the files of the project IMPACT4Mech related to the data-driven control of continuous-time linear time-invariant systems.
+This repository contains the code for the activities of the project IMPACT4Mech related to the data-driven control of continuous-time linear time-invariant systems.
 
 **ecc2025**: folder containing the MATLAB code for the numerical examples of the paper:
 > A. Bosso, M. Borghesi, A. Iannelli, G. Notarstefano, A. R. Teel, "Derivative-Free Data-Driven Control of Continuous-Time Linear Time-Invariant Systems." 2025 European Control Conference (ECC).
