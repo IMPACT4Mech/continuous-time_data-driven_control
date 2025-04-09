@@ -1,3 +1,5 @@
+[![arXiv][arxiv-shield]][arxiv-url]
+
 # Continuous-Time Data-Driven Control
 
 This repository contains the files of the project IMPACT4Mech related to the data-driven control of continuous-time linear time-invariant systems.
@@ -24,3 +26,11 @@ YALMIP: https://yalmip.github.io
 Alessandro Bosso
 
 alessandro.bosso@unibo.it
+
+
+[arxiv-shield]: https://img.shields.io/badge/arxiv-2410.24167-t?style=flat&logo=arxiv&logoColor=white&color=red
+[arxiv-url]: https://arxiv.org/abs/2410.24167
+
+## Acknowledgments
+
+The research leading to these results has received funding from the European Union's Horizon Europe research and innovation program under the Marie Skłodowska-Curie Grant Agreement No. 101104404 - IMPACT4Mech. https://cordis.europa.eu/project/id/101104404
