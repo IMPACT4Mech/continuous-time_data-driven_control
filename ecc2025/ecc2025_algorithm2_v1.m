@@ -20,7 +20,7 @@ s          = tf('s');
 plant_tf   = (s - 1)/(s^2 + 4)/s; % replace with the desired plant
 [num, den] = tfdata(plant_tf, 'v');
 
-% state space realization (controllability canonical form)
+% state space realization (controller canonical form)
 n = size(den, 2) - 1; % order of the system
 A = [zeros(n-1, 1) eye(n-1);
           -flip(den(2:end))];
