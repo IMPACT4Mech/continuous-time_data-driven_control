@@ -2,7 +2,7 @@
 % Numerical example for Algorithm 1 of the paper:
 % A. Bosso, M. Borghesi, A. Iannelli, G. Notarstefano, A. R. Teel
 % "Derivative-Free Data-Driven Control of Continuous-Time Linear
-% Time-Invariant Systems"
+% Time-Invariant Systems." arXiv preprint. arXiv:2410.24167 (2024).
 
 % This file requires the installation of MOSEK and YALMIP
 % MOSEK:  https://docs.mosek.com/10.2/toolbox/index.html
