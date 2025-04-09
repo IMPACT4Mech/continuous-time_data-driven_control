@@ -45,13 +45,13 @@ Ts     = 0.1;
 
 % plant initial conditions
 % x0 = 5*(2*rand(n, 1) - 1); % random initial conditions
-x0 = [-3.9223; 4.0631; 3.7965]; % example for the paper
+x0 = [-2.1002; 4.5808; 2.2305]; % example for the paper
 
 % applied input (sum of sinusoids)
 omega = 5;
 t     = 0:T/1000000:T;
-u     =    5*sin(omega*t) + 3*sin(2*omega*t) +...
-         2*sin(3*omega*t);
+u     =    4*sin(omega*t) + 3*sin(2*omega*t) +...
+         2*sin(3*omega*t) + 1*sin(4*omega*t);
 
 % plant simulation
 plant = ss(A, b, c', []);
@@ -62,7 +62,7 @@ y     = lsim(plant, u, t, x0)';
 % filter initial conditions
 zeta10 = zeros(n, 1);
 zeta20 = zeros(n, 1);
-chi0   = ones(n, 1);
+chi0   =  ones(n, 1);
 
 % filter dynamics
 filter = ss(Lambda, ell, eye(n), []);
@@ -146,6 +146,9 @@ optimize(constr, obj, ops);
 % gain computation
 Q = value(Q);
 K = U*Q*pinv(Za*Q)*[zeros(n, 2*n); eye(2*n)];
+
+disp('Computed K:')
+disp(K)
 
 %% Stability check
 
