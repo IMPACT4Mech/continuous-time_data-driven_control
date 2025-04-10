@@ -31,7 +31,6 @@ B = [    0,      0;
      5.679,      0;
      1.136, -3.146;
      1.136,      0];
-
 C = [1,  0,  1, -1;
      0,  1,  0,  0]; % not used
 
@@ -51,16 +50,16 @@ Ts     = 0.1;
 
 % plant initial conditions
 % x0 = 2*rand(n, 1) - 1; % random initial conditions
-x0  = [0.3110; -0.6576; 0.4121; -0.9363]; % example for the paper
+x0  = [0.1233; -0.7076; 0.4464; -0.8085]; % example for the paper
 
 % applied input (sum of sinusoids)
 omega1 = 5;
 omega2 = 7;
 t      = 0:T/1000000:T;
-u      = [    sin(omega1*t) + 2*sin(2*omega1*t) +...
-          3*sin(3*omega1*t) + 4*sin(4*omega1*t);
-            4*sin(omega2*t) + 3*sin(2*omega2*t) +...
-          2*sin(3*omega2*t) +   sin(4*omega2*t)];
+u      = [    sin(omega1*t) + 2*cos(2*omega1*t) +...
+          3*cos(3*omega1*t) + 4*sin(4*omega1*t);
+            4*sin(omega2*t) + 3*cos(2*omega2*t) +...
+          2*cos(3*omega2*t) +   sin(4*omega2*t)];
 
 % plant simulation
 plant = ss(A, B, eye(n), []);
@@ -75,9 +74,11 @@ zeta20  = zeros(m, 1);
 % filter dynamics
 filter1 = ss(-lambda*eye(n), gamma*eye(n), eye(n), []);
 zeta1   = lsim(filter1, x, t, zeta10)';
+zeta1(:, 1) = zeta10; % avoids nearly zero elements warning in MOSEK
 
 filter2 = ss(-lambda*eye(m), gamma*eye(m), eye(m), []);
 zeta2   = lsim(filter2, u, t, zeta20)';
+zeta2(:, 1) = zeta20; % avoids nearly zero elements warning in MOSEK
 
 % filter derivatives
 dzeta1 = -lambda*zeta1 + gamma*x;
