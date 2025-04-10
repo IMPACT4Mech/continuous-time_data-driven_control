@@ -67,7 +67,9 @@ chi0   =  ones(n, 1);
 % filter dynamics
 filter = ss(Lambda, ell, eye(n), []);
 zeta1  = lsim(filter, y, t, zeta10)';
+zeta1(:, 1) = zeta10; % avoids nearly zero elements warning in MOSEK
 zeta2  = lsim(filter, u, t, zeta20)';
+zeta2(:, 1) = zeta20; % avoids nearly zero elements warning in MOSEK
 chi    = lsim(filter, zeros(1, length(t)), t, chi0)';
 
 % derivatives
