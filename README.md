@@ -1,4 +1,5 @@
 [![arXiv][arxiv-shield]][arxiv-url]
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15186632.svg)](https://doi.org/10.5281/zenodo.15186632)
 
 # Continuous-Time Data-Driven Control
 
