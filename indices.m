@@ -30,25 +30,25 @@ end
 % computing the controllability indices
 mu = zeros(m, 1); % preallocation
 T  = zeros(n);    % preallocation
-j  = 1;           % column # of T
+k  = 1;           % column # of T
 for i = 0:n-1              % i: power of A
-    for k = 1:m            % k: column of B
-        v = R(:, i*m + k); % v = A^i B(:, k)
+    for j = 1:m            % j: column of B
+        v = R(:, i*m + j); % v = A^i B(:, j)
         if rank([T v]) == rank(T) + 1
             % if v is linearly independent from
-            % the previous columns of R
-            T(:, j) = v;         % update T
-            j       = j + 1;     % next column
-            mu(k)   = mu(k) + 1; % update the index
+            % the previous columns of R:
+            T(:, k) = v;         % update T
+            k       = k + 1;     % next column
+            mu(j)   = mu(j) + 1; % update the index
         end
     end
 end
 
 % reordering the linearly independent columns
 id = cumsum(mu) - (mu - 1); % first column of each index
-for k = 1:m                 % k: column of B
-    for i = 0:mu(k)-1       % i: power of A
-        T(:, id(k) + i) = A^i*B(:, k);
+for i = 1:m                 % i: column of B
+    for j = 0:mu(i)-1       % j: power of A
+        T(:, id(i) + j) = A^j*B(:, i);
     end
 end
 
