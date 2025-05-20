@@ -5,7 +5,11 @@
 
 This repository contains the code for the activities of the project IMPACT4Mech on data-driven control of continuous-time linear time-invariant systems.
 
-**indices.m**: MATLAB function that computes the controllability indices of a pair (A, B).
+**Main files:**
+
+- _indices.m_: MATLAB function that computes the controllability indices of a pair (A, B).
+
+- _canonical.m_: MATLAB function that computes the multivariable controller canonical form of a pair (A, B).
 
 **ecc2025**: folder containing the MATLAB code for the numerical examples of the paper:
 > A. Bosso, M. Borghesi, A. Iannelli, G. Notarstefano, A. R. Teel, "Derivative-Free Data-Driven Control of Continuous-Time Linear Time-Invariant Systems." 2025 European Control Conference (ECC).
