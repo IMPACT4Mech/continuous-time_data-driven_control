@@ -13,6 +13,8 @@ This repository contains the code for the activities of the project IMPACT4Mech 
 
 - _stabilize.m_: MATLAB function that computes a stabilizing gain from a dataset.
 
+- _X_solve.m_: MATLAB function that solves the matrix equation XΘ = ΘX, Xβ = φ.
+
 **ecc2025**: folder containing the MATLAB code for the numerical examples of the paper:
 > A. Bosso, M. Borghesi, A. Iannelli, G. Notarstefano, A. R. Teel, "Derivative-Free Data-Driven Control of Continuous-Time Linear Time-Invariant Systems." 2025 European Control Conference (ECC).
 
