@@ -9,7 +9,11 @@ This repository contains the code for the activities of the project IMPACT4Mech 
 
 - _canonical.m_: MATLAB function that computes the multivariable controller canonical form of a pair (A, B).
 
+- _find_nu.m_: MATLAB function that estimates the observability index of a plant from a dataset.
+
 - _indices.m_: MATLAB function that computes the controllability indices of a pair (A, B).
+
+- _realization.m_: MATLAB function that computes a canonical non-minimal realization of a plant.
 
 - _stabilize.m_: MATLAB function that computes a stabilizing gain from a dataset.
 
