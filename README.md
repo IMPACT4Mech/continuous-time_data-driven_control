@@ -1,11 +1,13 @@
-[![arXiv][arxiv-shield]][arxiv-url]
+[![arXiv][arxiv-shield1]][arxiv-url1]
+[![arXiv][arxiv-shield2]][arxiv-url2]
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15186632.svg)](https://doi.org/10.5281/zenodo.15186632)
 
 # Continuous-Time Data-Driven Control
 
 This repository contains the code for the activities of the project IMPACT4Mech on data-driven control of continuous-time linear time-invariant systems.
 
-**Main files:**
+**Main files:** these files contain the MATLAB code for the numerical examples of the paper:
+> A. Bosso, M. Borghesi, A. Iannelli, G. Notarstefano, A. R. Teel, "Data-Driven Control of Continuous-Time LTI Systems via Non-Minimal Realizations."
 
 - _batch_reactor_v1.m_: numerical example of data-driven stabilization and control with integral action.
 
@@ -47,8 +49,10 @@ Alessandro Bosso
 alessandro.bosso@unibo.it
 
 
-[arxiv-shield]: https://img.shields.io/badge/arxiv-2410.24167-t?style=flat&logo=arxiv&logoColor=white&color=red
-[arxiv-url]: https://arxiv.org/abs/2410.24167
+[arxiv-shield1]: https://img.shields.io/badge/arxiv-2410.24167-t?style=flat&logo=arxiv&logoColor=white&color=red
+[arxiv-shield2]: https://img.shields.io/badge/arxiv-2505.22505-t?style=flat&logo=arxiv&logoColor=white&color=red
+[arxiv-url1]: https://arxiv.org/abs/2410.24167
+[arxiv-url2]: https://arxiv.org/abs/2505.22505
 
 ## Acknowledgments
 
