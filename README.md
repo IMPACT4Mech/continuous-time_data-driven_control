@@ -26,7 +26,7 @@ This repository contains the code for the activities of the project IMPACT4Mech 
 - _X_solve.m_: MATLAB function that solves the matrix equation XΘ = ΘX, Xβ = φ.
 
 **ecc2025**: folder containing the MATLAB code for the numerical examples of the paper:
-> A. Bosso, M. Borghesi, A. Iannelli, G. Notarstefano, A. R. Teel, "Derivative-Free Data-Driven Control of Continuous-Time Linear Time-Invariant Systems." 2025 European Control Conference (ECC).
+> A. Bosso, M. Borghesi, A. Iannelli, G. Notarstefano, A. R. Teel, "Derivative-Free Data-Driven Control of Continuous-Time Linear Time-Invariant Systems." European Journal of Control, presented at the 2025 European Control Conference (ECC).
 
 Content of the folder:
 
