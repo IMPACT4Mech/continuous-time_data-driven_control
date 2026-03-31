@@ -15,7 +15,7 @@ Files to run to reproduce the numerical results of the paper:
 
 - _surface_vessel_v1.m_: numerical example of data-driven output regulation.
 
-MATLAB functions used for the numerical examples:
+MATLAB functions used for the numerical examples (to be included in the same folder):
 
 - _canonical.m_: MATLAB function that computes the multivariable controller canonical form of a pair (A, B).
 
