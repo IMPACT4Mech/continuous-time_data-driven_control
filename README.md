@@ -9,6 +9,8 @@ This repository contains the code for the activities of the project IMPACT4Mech 
 **Main files:** these files contain the MATLAB code for the numerical examples of the paper:
 > A. Bosso, M. Borghesi, A. Iannelli, G. Notarstefano, A. R. Teel, "Data-Driven Control of Continuous-Time LTI Systems via Non-Minimal Realizations." IEEE Transactions on Automatic Control.
 
+Files to run to reproduce the numerical results of the paper:
+
 - _batch_reactor_v1.m_: numerical example of data-driven stabilization and control with integral action.
 
 - _surface_vessel_v1.m_: numerical example of data-driven output regulation.
