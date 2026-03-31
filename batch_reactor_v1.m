@@ -149,7 +149,7 @@ F  = kron(eye(p + m), Lambda);
 G  = [   zeros(p*nu, m);
       kron(eye(m), ell)];
 L  = [kron(eye(p), ell);
-         zeros(p*nu, p)];
+         zeros(m*nu, p)];
 
 % internal model tuning (integral action)
 S_0     = 0;
