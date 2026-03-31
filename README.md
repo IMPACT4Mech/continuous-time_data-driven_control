@@ -15,6 +15,8 @@ Files to run to reproduce the numerical results of the paper:
 
 - _surface_vessel_v1.m_: numerical example of data-driven output regulation.
 
+MATLAB functions used for the numerical examples:
+
 - _canonical.m_: MATLAB function that computes the multivariable controller canonical form of a pair (A, B).
 
 - _find_nu.m_: MATLAB function that estimates the observability index of a plant from a dataset.
